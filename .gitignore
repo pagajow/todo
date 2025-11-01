@@ -1,0 +1,117 @@
+# === GLOBAL ===
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary / backup files
+*.tmp
+*.bak
+*.swp
+*.lock
+*.log
+
+# Archives
+*.zip
+*.tar
+*.gz
+*.rar
+
+# Environment variables
+.env*
+!.env.example
+!.env.*.example
+
+# === PYTHON / DJANGO ===
+__pycache__/
+*.py[cod]
+*$py.class
+media/
+staticfiles/
+backend/db_data/
+*.mo
+*.pot
+
+# SQLite databases and journals
+*.sqlite
+*.sqlite3
+*.db
+
+# rollback/WAL artifacts
+*-journal
+*.sqlite-journal
+*.sqlite3-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.venv*/
+env*/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE / editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Test / coverage
+htmlcov/
+.tox/
+.coverage
+coverage.xml
+coverage/
+*.cover
+*.py,cover
+.pytest_cache/
+nosetests.xml
+test_*.xml
+
+# === FRONTEND (React / Vite / Node.js) ===
+node_modules/
+dist/
+build/
+.cache/
+.npm/
+.pnpm-store/
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Linters' caches
+.eslintcache
+.stylelintcache
+
+# Vite cache
+.vite/
+
+# TypeScript incremental build
+*.tsbuildinfo
+
+# === DOCKER / CI / OTHER ===
+*.pid
+*.seed
+*.pid.lock
+docker-compose.override.yml
+
+# === MISC ===
+*.orig
+*.rej
+*.bak
+*~
+
+# === OS specific ===
+ehthumbs.db
+Icon?
+
+
+# === OTHER FILES ===
+notes.md
