@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Backend – DEV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: system-ui, sans-serif; margin: 2rem; line-height: 1.5; }
+        code { background: #f3f3f3; padding: 0.2rem 0.35rem; border-radius: 4px; }
+        ul { margin: 0.5rem 0 0 1.25rem; }
+    </style>
+</head>
+<body>
+    <h1>Backend is running (DEBUG)</h1>
+    <p>API endpoints:</p>
+    <ul>
+        <li><code>/api/tasks/</code> – list, POST</li>
+        <li><code>/api/tasks/&lt;id&gt;/</code> – GET, PUT, PATCH, DELETE</li>
+    </ul>
+    <p>Tools:</p>
+    <ul>
+        <li><a href="/admin/">/admin/</a></li>
+    </ul>
+    <p>Parameters:</p>
+    <ul>
+        <li><code>?search=...</code></li>
+        <li><code>?ordering=created_at</code> or <code>?ordering=-created_at</code></li>
+    </ul>
+</body>
+</html>
