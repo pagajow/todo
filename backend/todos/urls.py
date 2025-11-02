@@ -2,6 +2,7 @@ from django.urls import path, include
 from rest_framework.routers import SimpleRouter
 from .views import TaskViewSet
 from rest_framework.schemas import get_schema_view
+from django.conf import settings
 
 app_name = "todos"
 
@@ -15,5 +16,7 @@ router = SimpleRouter()
 router.register("tasks", TaskViewSet, basename="task")
 urlpatterns = [
     path("", include(router.urls)),
-    path("schema/", schema_view, name="openapi-schema"),
 ]
+
+if settings.DEBUG:
+    urlpatterns += [path("schema/", schema_view, name="openapi-schema"),]
