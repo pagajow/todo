@@ -1,0 +1,34 @@
+# --- node / npm / build cache ---
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json.*
+
+# --- build output ---
+dist
+build
+
+# --- tests / docs / temp files ---
+coverage
+__tests__
+__pycache__
+*.swp
+*.tmp
+*.bak
+*.md
+*.map
+
+# --- OS / local ---
+*.local
+*.env
+
+# --- OS / editor / system / IDE / etc. ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.git
+.gitignore
+*.log

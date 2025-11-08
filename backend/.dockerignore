@@ -1,0 +1,33 @@
+# --- Python cache / bytecode ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# --- Virtual environments ---
+venv/
+.venv/
+
+# --- Databases / runtime data ---
+db.sqlite3
+db.sqlite3-*
+db_data/
+staticfiles/
+
+# --- Logs / coverage / tests ---
+*.log
+pytest_cache/
+.mypy_cache/
+.coverage
+
+# --- Env / secrets ---
+.env
+
+# --- OS / editor / system / IDE / etc. ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.git
+.gitignore
+*.log

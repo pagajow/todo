@@ -1,0 +1,33 @@
+name: todoapp
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/.env
+    volumes:
+      - backend_db:/app/db_data
+      - backend_static:/app/staticfiles
+    command: ["/bin/sh","-c","/app/entrypoint.sh"]
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    depends_on:
+      backend:
+        condition: service_started
+    ports:
+      - "80:80"
+    volumes:
+      - backend_static:/var/www/static:ro
+      - nginx_site:/usr/share/nginx/html:ro
+    restart: unless-stopped
+
+
+volumes:
+  backend_db:
+  backend_static:
+  nginx_site:
